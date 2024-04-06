@@ -26,4 +26,4 @@ type WeekendOrWork = {
 const isWeekend = (day): WeekendOrWork => {
   return day;
 };
-console.log(isWeekend(Day.Monday));
+console.log(isWeekend("Sunday"));
