@@ -13,17 +13,17 @@ enum Day {
   Sunday = "Sunday",
 }
 
-type WeekendOrWork = {
-  [Day.Monday]: true;
-  [Day.Tuesday]: true;
-  [Day.Wednesday]: true;
-  [Day.Thursday]: true;
-  [Day.Friday]: true;
-  [Day.Saturday]: false;
-  [Day.Sunday]: false;
+const WeekendOrWork = {
+  [Day.Monday]: true,
+  [Day.Tuesday]: true,
+  [Day.Wednesday]: true,
+  [Day.Thursday]: true,
+  [Day.Friday]: true,
+  [Day.Saturday]: false,
+  [Day.Sunday]: false,
 };
 
-const isWeekend = (day): WeekendOrWork => {
-  return day;
+const isWeekend = (day: Day): boolean => {
+  return WeekendOrWork[day];
 };
-console.log(isWeekend("Sunday"));
+console.log(isWeekend(Day.Monday));
