@@ -12,12 +12,14 @@ type User = {
   surname: string;
   email: string;
   password: string;
+};
+
+function createOrUpdateUser(initialValues: Partial<User>) {
+  return initialValues;
 }
 
-function createOrUpdateUser(initialValues: User) {
-  // Оновлення користувача
-}
-
-createOrUpdateUser({ email: 'user@mail.com', password: 'password123' });
+console.log(
+  createOrUpdateUser({ email: "user@mail.com", password: "password123" })
+);
 
 export {};

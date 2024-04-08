@@ -4,26 +4,18 @@
 */
 
 enum Day {
-  Monday = "Monday",
-  Tuesday = "Thusday",
-  Wednesday = "Wednesday",
-  Thursday = "Thursday",
-  Friday = "Friday",
-  Saturday = "Saturday",
-  Sunday = "Sunday",
+  Monday,
+  Tuesday,
+  Wednesday,
+  Thursday,
+  Friday,
+  Saturday,
+  Sunday,
 }
 
-const WeekendOrWork = {
-  [Day.Monday]: true,
-  [Day.Tuesday]: true,
-  [Day.Wednesday]: true,
-  [Day.Thursday]: true,
-  [Day.Friday]: true,
-  [Day.Saturday]: false,
-  [Day.Sunday]: false,
-};
-
 const isWeekend = (day: Day): boolean => {
-  return WeekendOrWork[day];
+  return day === Day.Saturday || day === Day.Sunday ? true : false;
 };
-console.log(isWeekend(Day.Monday));
+console.log(
+  isWeekend(Day.Monday) ? "Its weekend, time to relax 😃" : "Time to work!"
+);
